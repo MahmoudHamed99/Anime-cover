@@ -1,0 +1,201 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+.background {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    background-color: #000;
+}
+.line {
+    position: absolute;
+    width: 2px;
+    height: 50%;
+    border-radius: 5px; 
+    filter: drop-shadow(0 0 6px white);
+    opacity: 1;
+}
+.line:nth-of-type(odd) {
+    background: linear-gradient(45deg, white, transparent);
+    animation: digital2 3s linear infinite;
+}
+.line:nth-of-type(even) {
+    background: linear-gradient(45deg, transparent, white);
+    animation: digital 3s linear infinite;
+}
+.line:nth-of-type(1) {
+    left: 0;
+    animation-duration: 3s;
+}
+.line:nth-of-type(2) {
+    left: 10%;
+    animation-duration: 5s;
+}
+.line:nth-of-type(3) {
+    left: 15%;
+    animation-duration: 3.5s;
+}
+.line:nth-of-type(4) {
+    left: 20%;
+    animation-duration: 4s;
+}
+.line:nth-of-type(5) {
+    left: 25%;
+    animation-duration: 6s;
+}
+.line:nth-of-type(6) {
+    left: 30%;
+    animation-duration: 5.5s;
+}
+.line:nth-of-type(7) {
+    left: 35%;
+    animation-duration: 2.3s;
+}
+.line:nth-of-type(8) {
+    left: 40%;
+    animation-duration: 3.2s;
+}
+.line:nth-of-type(9) {
+    left: 45%;
+    animation-duration: 4.2s;
+}
+.line:nth-of-type(10) {
+    left: 50%;
+    animation-duration: 4.5s;
+}
+.line:nth-of-type(11) {
+    left: 55%;
+    animation-duration: 5.6s;
+}
+.line:nth-of-type(12) {
+    left: 60%;
+    animation-duration: 2.3s;
+}
+.line:nth-of-type(13) {
+    left: 65%;
+    animation-duration: 3.7s;
+}
+.line:nth-of-type(14) {
+    left: 70%;
+    animation-duration: 2.9s;
+}
+.line:nth-of-type(15) {
+    left: 75%;
+    animation-duration: 6.2s;
+}
+.line:nth-of-type(16) {
+    left: 80%;
+    animation-duration: 4.1s;
+}
+.line:nth-of-type(17) {
+    left: 85%;
+    animation-duration: 5.8s;
+}
+.line:nth-of-type(18) {
+    left: 90%;
+    animation-duration: 2.6s;
+}
+.line:nth-of-type(19) {
+    left: 95%;
+    animation-duration: 4.9s;
+}
+.line:nth-of-type(20) {
+    left: 98%;
+    animation-duration: 4.3s;
+}
+
+.background .zig {
+    position: absolute;
+    height: 100%;
+    background-color: black;
+    clip-path: polygon(5% 0%, 7% 0%, 7% 49%, 51% 49%, 50% 49%, 49% 49%, 48% 100%, 47% 100%, 47% 50%, 5% 50%);
+}
+.background .zig::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, white, transparent);
+    filter: drop-shadow(0 0 6px white);
+}
+.background .line2 { 
+    left: 5%;
+    width: 110px;
+    transform: rotateY(180deg);
+}
+.background .line2::before {
+    animation: digital3 2s linear infinite;
+}
+.background .line3 {
+    top: 24%;
+    left: 60%;
+    width: 200px;
+    transform: scale(1);
+    transform: rotateY(180deg);
+}
+.background .line3::before {
+    animation: digital3 3.5s linear infinite;
+}
+.background .line4 {
+    top: -26%;
+    left: 37%;
+    width: 180px;
+}
+.background .line4::before {
+    animation: digital3 4.5s linear infinite;
+}
+.background .line5 {
+    top: 35%;
+    left: 27%;
+    width: 175px;
+    transform: scale(0.5);
+}
+.background .line5::before {
+    animation: digital3 3.7s linear infinite;
+}
+.background .line6 {
+    top: -15%;
+    left: 56%;
+    width: 150px;
+}
+.background .line6::before {
+    animation: digital3 2.7s linear infinite;
+}
+
+@keyframes digital {
+    0% {
+        bottom: -50%;
+        opacity: 1;
+    }
+    100% {
+        bottom: 100%;
+        opacity: 0;
+    }
+}
+@keyframes digital2 {
+    0% {
+        bottom: 100%;
+        opacity: 1;
+    }
+    100% {
+        bottom: -50%;
+        opacity: 0;
+    }
+}
+@keyframes digital3 {
+    0% {
+        height: 0;
+        width: 50%;
+        opacity: 1;
+    }
+    85% {
+        opacity: 1;
+    }
+    100% {
+        height: 100%;
+        width: 100%;
+        opacity: 0;
+    }
+}
